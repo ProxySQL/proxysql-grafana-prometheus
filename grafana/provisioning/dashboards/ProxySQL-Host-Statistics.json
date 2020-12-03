@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1605220580484,
+  "iteration": 1607031768806,
   "links": [],
   "panels": [
     {
@@ -72,6 +72,14 @@
               "to": "",
               "type": 1,
               "value": "4"
+            },
+            {
+              "from": "",
+              "id": 5,
+              "text": "SHUNNED_REPLICATION_LAG",
+              "to": "",
+              "type": 1,
+              "value": "5"
             }
           ],
           "thresholds": {
@@ -3851,7 +3859,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -3869,5 +3877,5 @@
   "timezone": "",
   "title": "ProxySQL Host Statistics",
   "uid": "CeiGgS5Gk",
-  "version": 2
+  "version": 1
 }
