@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1606946292189,
+  "iteration": 1607031547925,
   "links": [],
   "panels": [
     {
@@ -592,7 +592,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "Total Send / Receive Rates",
       "type": "stat"
     },
     {
@@ -727,7 +727,6 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
           "text": [
             "All",
             "192.168.1.28:6070",
@@ -768,5 +767,5 @@
   "timezone": "",
   "title": "ProxySQL Fleet Overview",
   "uid": "cBk_ZGpGz",
-  "version": 2
+  "version": 1
 }
