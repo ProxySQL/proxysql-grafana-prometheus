@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1607031547925,
+  "iteration": 1610482751316,
   "links": [],
   "panels": [
     {
@@ -66,7 +66,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "sum(proxysql_active_transactions{instance=~\"$instance\",job=\"proxysql\"})",
@@ -124,7 +124,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}",
@@ -182,7 +182,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}/proxysql_mysql_max_connections{instance=~\"$instance\",job=\"proxysql\"}*100",
@@ -239,7 +239,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_server_connections_connected{instance=~\"$instance\",job=\"proxysql\"}",
@@ -308,7 +308,7 @@
         },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "100-(sum(proxysql_connpool_conns{instance=~\"$instance\",job=\"proxysql\",status=\"used\"})/sum(proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"})*100)",
@@ -380,7 +380,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -490,7 +490,7 @@
         },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "sum(proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"})",
@@ -563,7 +563,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "sum(irate(proxysql_queries_frontends_bytes_total{instance=~\"$instance\",job=\"proxysql\",traffic_flow=\"sent\"}[$__rate_interval]))",
@@ -652,7 +652,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -728,25 +728,22 @@
         "current": {
           "selected": true,
           "text": [
-            "All",
-            "192.168.1.28:6070",
-            "192.168.1.28:6071"
+            "All"
           ],
           "value": [
-            "$__all",
-            "192.168.1.28:6070",
-            "192.168.1.28:6071"
+            "$__all"
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(proxysql_connpool_conns, instance)",
+        "definition": "label_values(proxysql_uptime_seconds_total, instance)",
+        "error": null,
         "hide": 0,
         "includeAll": true,
         "label": null,
         "multi": true,
         "name": "instance",
         "options": [],
-        "query": "label_values(proxysql_connpool_conns, instance)",
+        "query": "label_values(proxysql_uptime_seconds_total, instance)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,

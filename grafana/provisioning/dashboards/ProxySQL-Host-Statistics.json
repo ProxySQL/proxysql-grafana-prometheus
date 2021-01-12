@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1607031768806,
+  "iteration": 1610482273514,
   "links": [],
   "panels": [
     {
@@ -127,7 +127,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_connpool_conns_status{instance=~\"$instance\", endpoint=~\"$endpoint\"}",
@@ -185,7 +185,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_client_connections_total{status=\"created\"}[$__rate_interval])",
@@ -274,7 +274,7 @@
         },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_access_denied_wrong_password_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
@@ -369,7 +369,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}/proxysql_mysql_max_connections{instance=~\"$instance\",job=\"proxysql\"}*100",
@@ -434,7 +434,7 @@
         },
         "textMode": "value_and_name"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}",
@@ -512,7 +512,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_uptime_seconds_total{instance=~\"$instance\",job=\"proxysql\"}",
@@ -575,7 +575,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "proxysql_active_transactions{instance=~\"$instance\",job=\"proxysql\"}",
@@ -638,7 +638,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_slow_queries_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
@@ -698,7 +698,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_queries_frontends_bytes_total{instance=~\"$instance\",job=\"proxysql\",traffic_flow=\"sent\"}[$__rate_interval])",
@@ -758,7 +758,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_queries_frontends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
@@ -818,7 +818,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"sent\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
@@ -878,7 +878,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
@@ -932,7 +932,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1054,7 +1054,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1151,7 +1151,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1267,7 +1267,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1382,7 +1382,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1499,7 +1499,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1612,7 +1612,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1725,7 +1725,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
@@ -1842,7 +1842,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2031,7 +2031,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2128,7 +2128,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2227,7 +2227,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2331,7 +2331,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2429,7 +2429,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2527,7 +2527,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2625,7 +2625,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2723,7 +2723,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2733,7 +2733,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(proxysql_hostgroup_locked_set_cmds{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_hostgroup_locked_set_cmds_total{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Set Command",
           "refId": "A"
@@ -2827,7 +2827,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2944,7 +2944,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3095,7 +3095,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3208,7 +3208,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3338,7 +3338,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3489,7 +3489,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3597,7 +3597,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3715,7 +3715,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.1",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3783,18 +3783,19 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "192.168.1.28:6070",
-          "value": "192.168.1.28:6070"
+          "text": "192.168.1.89:6070",
+          "value": "192.168.1.89:6070"
         },
         "datasource": "Prometheus",
-        "definition": "label_values(proxysql_connpool_conns, instance)",
+        "definition": "label_values(proxysql_uptime_seconds_total, instance)",
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": null,
         "multi": false,
         "name": "instance",
         "options": [],
-        "query": "label_values(proxysql_connpool_conns, instance)",
+        "query": "label_values(proxysql_uptime_seconds_total, instance)",
         "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
@@ -3808,7 +3809,8 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
+          "selected": true,
+          "tags": [],
           "text": [
             "All"
           ],
@@ -3818,6 +3820,7 @@
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_connpool_conns, endpoint)",
+        "error": null,
         "hide": 0,
         "includeAll": true,
         "label": null,
@@ -3859,7 +3862,7 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
