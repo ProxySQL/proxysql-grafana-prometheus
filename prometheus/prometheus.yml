@@ -32,7 +32,7 @@ scrape_configs:
     scrape_interval: 5s
 
     static_configs:
-         - targets: ['192.168.1.89:6070','192.168.1.89:6071']
+         - targets: ['172.17.0.1:6070']
 
   - job_name: 'prometheus'
 
