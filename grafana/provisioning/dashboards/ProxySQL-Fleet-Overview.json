@@ -726,25 +726,21 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
+          "selected": false,
+          "text": "127.0.0.1:6070",
+          "value": "127.0.0.1:6070"
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_uptime_seconds_total, instance)",
         "error": null,
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": null,
-        "multi": true,
+        "multi": false,
         "name": "instance",
         "options": [],
         "query": "label_values(proxysql_uptime_seconds_total, instance)",
-        "refresh": 1,
+        "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
@@ -758,8 +754,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": [ "proxysql" ],
-          "value": [ "proxysql" ]
+          "text": "proxysql",
+          "value": "proxysql"
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_client_connections_connected{instance=~\"$instance\"},job)",

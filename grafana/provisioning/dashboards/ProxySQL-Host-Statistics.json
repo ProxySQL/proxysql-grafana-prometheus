@@ -3783,8 +3783,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "192.168.1.89:6070",
-          "value": "192.168.1.89:6070"
+          "text": "127.0.0.1:6070",
+          "value": "127.0.0.1:6070"
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_uptime_seconds_total, instance)",
@@ -3842,8 +3842,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": [ "proxysql" ],
-          "value": [ "proxysql" ]
+          "text": "proxysql",
+          "value": "proxysql"
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_client_connections_connected{instance=~\"$instance\"},job)",
