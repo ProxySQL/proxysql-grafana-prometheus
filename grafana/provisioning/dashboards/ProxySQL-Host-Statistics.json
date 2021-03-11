@@ -3845,7 +3845,7 @@
           "text": [ "proxysql" ],
           "value": [ "proxysql" ]
         },
-        "datasource": "null",
+        "datasource": "Prometheus",
         "definition": "label_values(proxysql_client_connections_connected{instance=~\"$instance\"},job)",
         "error": null,
         "hide": 2,
