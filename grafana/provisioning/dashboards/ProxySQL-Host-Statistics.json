@@ -277,43 +277,43 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_access_denied_wrong_password_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_access_denied_wrong_password_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Wrong Password",
           "refId": "A"
         },
         {
-          "expr": "irate(proxysql_access_denied_max_user_connections_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_access_denied_max_user_connections_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Max Connections Reached",
           "refId": "B"
         },
         {
-          "expr": "irate(proxysql_access_denied_max_connections_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_access_denied_max_connections_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Max User Connections Reached",
           "refId": "C"
         },
         {
-          "expr": "irate(proxysql_max_connect_timeouts_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_max_connect_timeouts_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Backend Max Connect Timeout",
           "refId": "D"
         },
         {
-          "expr": "irate(proxysql_backend_lagging_during_query_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_backend_lagging_during_query_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Queries failed on SHUNNED server",
           "refId": "E"
         },
         {
-          "expr": "irate(proxysql_backend_offline_during_query_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_backend_offline_during_query_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Queries failed on OFFLINE server",
           "refId": "F"
         },
         {
-          "expr": "irate(proxysql_mysql_unexpected_frontend_packets_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_mysql_unexpected_frontend_packets_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Unexpected Packet Received",
           "refId": "G"
@@ -372,7 +372,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}/proxysql_mysql_max_connections{instance=~\"$instance\",job=\"proxysql\"}*100",
+          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"$job\"}/proxysql_mysql_max_connections{instance=~\"$instance\",job=\"$job\"}*100",
           "interval": "",
           "legendFormat": "Frontend Usage (%)",
           "refId": "C"
@@ -437,21 +437,21 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}",
+          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"$job\"}",
           "instant": false,
           "interval": "",
           "legendFormat": "Frontend Connections",
           "refId": "A"
         },
         {
-          "expr": "sum(proxysql_connpool_conns{instance=~\"$instance\",job=\"proxysql\",status=\"used\"})",
+          "expr": "sum(proxysql_connpool_conns{instance=~\"$instance\",job=\"$job\",status=\"used\"})",
           "instant": false,
           "interval": "",
           "legendFormat": "Backend Connections (in-use)",
           "refId": "C"
         },
         {
-          "expr": "sum(proxysql_connpool_conns{instance=~\"$instance\",job=\"proxysql\",status=\"free\"})",
+          "expr": "sum(proxysql_connpool_conns{instance=~\"$instance\",job=\"$job\",status=\"free\"})",
           "instant": false,
           "interval": "",
           "legendFormat": "Backend Connections (free)",
@@ -515,7 +515,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "proxysql_uptime_seconds_total{instance=~\"$instance\",job=\"proxysql\"}",
+          "expr": "proxysql_uptime_seconds_total{instance=~\"$instance\",job=\"$job\"}",
           "instant": true,
           "interval": "",
           "legendFormat": "Uptime",
@@ -578,7 +578,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "proxysql_active_transactions{instance=~\"$instance\",job=\"proxysql\"}",
+          "expr": "proxysql_active_transactions{instance=~\"$instance\",job=\"$job\"}",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -641,7 +641,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_slow_queries_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_slow_queries_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -701,7 +701,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_queries_frontends_bytes_total{instance=~\"$instance\",job=\"proxysql\",traffic_flow=\"sent\"}[$__rate_interval])",
+          "expr": "irate(proxysql_queries_frontends_bytes_total{instance=~\"$instance\",job=\"$job\",traffic_flow=\"sent\"}[$__rate_interval])",
           "instant": false,
           "interval": "",
           "legendFormat": "Frontend Send Rate",
@@ -761,7 +761,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_queries_frontends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_queries_frontends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "instant": false,
           "interval": "",
           "legendFormat": "Frontend Receive Rate",
@@ -821,7 +821,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"sent\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"sent\",instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "instant": false,
           "interval": "",
           "legendFormat": "Backend Send Rate",
@@ -881,7 +881,7 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_queries_backends_bytes_total{traffic_flow=\"received\",instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "instant": false,
           "interval": "",
           "legendFormat": "Backend Receive Rate",
@@ -942,31 +942,31 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(proxysql_myhgm_myconnpool_get_total{instance=~\"$instance\",job=\"proxysql\",purpose=\"ping\"}[$__rate_interval])",
+          "expr": "irate(proxysql_myhgm_myconnpool_get_total{instance=~\"$instance\",job=\"$job\",purpose=\"ping\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Ping Requested",
           "refId": "A"
         },
         {
-          "expr": "irate(proxysql_connpool_get_conn_failure_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_connpool_get_conn_failure_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "No Connection Available",
           "refId": "B"
         },
         {
-          "expr": "irate(proxysql_myhgm_myconnpool_push_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_myhgm_myconnpool_push_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Connection Returned",
           "refId": "D"
         },
         {
-          "expr": "irate(proxysql_myhgm_myconnpool_reset_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_myhgm_myconnpool_reset_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Connection Reset",
           "refId": "C"
         },
         {
-          "expr": "irate(proxysql_myhgm_myconnpool_destroy_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_myhgm_myconnpool_destroy_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Connection Destroyed",
           "refId": "E"
@@ -1277,7 +1277,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"proxysql\"}",
+          "expr": "proxysql_client_connections_connected{instance=~\"$instance\",job=\"$job\"}",
           "interval": "",
           "legendFormat": "{{instance}}",
           "refId": "B"
@@ -2537,7 +2537,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(proxysql_com_frontend_stmt_total{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_com_frontend_stmt_total{instance=\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "{{op}}",
           "refId": "A"
@@ -2635,7 +2635,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(proxysql_com_backend_stmt_total{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_com_backend_stmt_total{instance=\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "{{op}}",
           "refId": "A"
@@ -2733,13 +2733,13 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(proxysql_hostgroup_locked_set_cmds_total{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_hostgroup_locked_set_cmds_total{instance=\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Set Command",
           "refId": "A"
         },
         {
-          "expr": "irate(proxysql_hostgroup_locked_queries_total{instance=\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(proxysql_hostgroup_locked_queries_total{instance=\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "HG Locked Queries",
           "refId": "B"
@@ -2954,62 +2954,62 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "irate(pulled_mysql_query_rules_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_query_rules_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "interval": "",
           "legendFormat": "Query Rules - {{status}}",
           "refId": "A"
         },
         {
-          "expr": "irate(pulled_mysql_servers_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Servers - {{status}}",
           "refId": "B"
         },
         {
-          "expr": "irate(pulled_mysql_servers_runtime_checks_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_runtime_checks_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "Runtime MySQL Servers - {{status}}",
           "refId": "G"
         },
         {
-          "expr": "irate(pulled_mysql_servers_replication_hostgroups_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_replication_hostgroups_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Replication Hostgroups - {{status}}",
           "refId": "C"
         },
         {
-          "expr": "irate(pulled_mysql_servers_galera_hostgroups_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_galera_hostgroups_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Group Replication Hostgroups - {{status}}",
           "refId": "D"
         },
         {
-          "expr": "irate(pulled_mysql_servers_group_replication_hostgroups_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_group_replication_hostgroups_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Galera Replication Hostgroups - {{status}}",
           "refId": "E"
         },
         {
-          "expr": "irate(pulled_mysql_servers_aws_aurora_hostgroups_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_servers_aws_aurora_hostgroups_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Aurora Replication Hostgroups - {{status}}",
           "refId": "F"
         },
         {
-          "expr": "irate(pulled_mysql_users_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_mysql_users_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "MySQL Users - {{status}}",
           "refId": "H"
         },
         {
-          "expr": "irate(pulled_proxysql_servers_total{instance=~\"$instance\",job=\"proxysql\"}[$__rate_interval])",
+          "expr": "irate(pulled_proxysql_servers_total{instance=~\"$instance\",job=\"$job\"}[$__rate_interval])",
           "hide": false,
           "interval": "",
           "legendFormat": "ProxySQL Servers - {{status}}",
@@ -3783,8 +3783,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "192.168.1.89:6070",
-          "value": "192.168.1.89:6070"
+          "text": "127.0.0.1:6070",
+          "value": "127.0.0.1:6070"
         },
         "datasource": "Prometheus",
         "definition": "label_values(proxysql_uptime_seconds_total, instance)",
@@ -3826,30 +3826,36 @@
         "label": null,
         "multi": true,
         "name": "endpoint",
-        "options": [
-          {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          },
-          {
-            "selected": false,
-            "text": "127.0.0.1:13306",
-            "value": "127.0.0.1:13306"
-          },
-          {
-            "selected": false,
-            "text": "127.0.0.1:13307",
-            "value": "127.0.0.1:13307"
-          },
-          {
-            "selected": false,
-            "text": "127.0.0.1:13308",
-            "value": "127.0.0.1:13308"
-          }
-        ],
+        "options": [],
         "query": "label_values(proxysql_connpool_conns, endpoint)",
-        "refresh": 0,
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "proxysql",
+          "value": "proxysql"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(proxysql_client_connections_connected{instance=~\"$instance\"},job)",
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": "job",
+        "multi": false,
+        "name": "job",
+        "options": [],
+        "query": "label_values(proxysql_client_connections_connected{instance=~\"$instance\"},job)",
+        "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
