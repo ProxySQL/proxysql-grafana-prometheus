@@ -188,35 +188,35 @@
       "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "irate(proxysql_client_connections_total{status=\"created\"}[$__rate_interval])",
+          "expr": "irate(proxysql_client_connections_total{instance=~\"$instance\",status=\"created\"}[$__rate_interval])",
           "instant": false,
           "interval": "20s",
           "legendFormat": "Client Created",
           "refId": "D"
         },
         {
-          "expr": " irate(proxysql_client_connections_total{status=\"aborted\"}[$__rate_interval])",
+          "expr": " irate(proxysql_client_connections_total{instance=~\"$instance\",status=\"aborted\"}[$__rate_interval])",
           "instant": false,
           "interval": "20s",
           "legendFormat": "Client Aborted",
           "refId": "E"
         },
         {
-          "expr": "irate(proxysql_server_connections_total{status=\"created\"}[$__rate_interval])",
+          "expr": "irate(proxysql_server_connections_total{instance=~\"$instance\",status=\"created\"}[$__rate_interval])",
           "instant": false,
           "interval": "20s",
           "legendFormat": "Server Created",
           "refId": "C"
         },
         {
-          "expr": "irate(proxysql_server_connections_total{status=\"aborted\"}[$__rate_interval])",
+          "expr": "irate(proxysql_server_connections_total{instance=~\"$instance\",status=\"aborted\"}[$__rate_interval])",
           "instant": false,
           "interval": "20s",
           "legendFormat": "Server Aborted",
           "refId": "A"
         },
         {
-          "expr": "irate(proxysql_server_connections_total{status=\"delayed\"}[$__rate_interval])",
+          "expr": "irate(proxysql_server_connections_total{instance=~\"$instance\",status=\"delayed\"}[$__rate_interval])",
           "instant": false,
           "interval": "20s",
           "legendFormat": "Server Delayed",
